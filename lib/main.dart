@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simple_weahter_app_ad/weather_app.dart';
 
 void main() {
   runApp(const MainApp());
@@ -12,14 +13,5 @@ class MainApp extends StatelessWidget {
     return const MaterialApp(
       home: WeatherApp(),
     );
-  }
-}
-
-class WeatherApp extends StatelessWidget {
-  const WeatherApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }
