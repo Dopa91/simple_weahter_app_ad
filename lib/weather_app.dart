@@ -9,7 +9,12 @@ class WeatherApp extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Bober Wetter App"),
       ),
-      body: Container(),
+      body: Container(
+        child: const Text(
+          "Willkommen zur Wetter-App!",
+          style: TextStyle(fontSize: 24, color: Colors.blue),
+        ),
+      ),
     );
   }
 }
