@@ -18,4 +18,4 @@ class MainApp extends StatelessWidget {
 }
 
 WeatherData weatherNow =
-    WeatherData(city: "Krefeld", temperature: 24.4, weaterCondition: "sunny");
+    WeatherData(city: "Krefeld", temperature: 24.4, weaterCondition: "Sunny");
