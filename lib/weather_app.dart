@@ -7,34 +7,45 @@ class WeatherApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Bober Wetter App"),
+        title: const Text(
+          "Bober Wetter App",
+          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+        ),
+        backgroundColor: Colors.redAccent,
       ),
-      body: Center(
-        child: Column(
-          children: [
-            Container(
+      body: Column(
+        children: [
+          Center(
+            child: Container(
               child: const Text(
                 "Willkommen zur Wetter-App!",
                 style: TextStyle(fontSize: 24, color: Colors.blue),
               ),
             ),
-            const Column(
-              children: [
-                Text("Stadt"),
-              ],
-            ),
-            const Column(
-              children: [
-                Text("Temperatur"),
-              ],
-            ),
-            const Column(
-              children: [
-                Text("Wetter"),
-              ],
-            ),
-          ],
-        ),
+          ),
+          const Row(
+            children: [
+              Column(
+                children: [
+                  Text(
+                    "Stadt",
+                    style: TextStyle(fontSize: 24),
+                  ),
+                ],
+              ),
+            ],
+          ),
+          const Row(
+            children: [
+              Text("Temperatur"),
+            ],
+          ),
+          const Row(
+            children: [
+              Text("Wetter"),
+            ],
+          ),
+        ],
       ),
     );
   }
