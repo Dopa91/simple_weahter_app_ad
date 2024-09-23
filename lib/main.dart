@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:simple_weahter_app_ad/weather_app.dart';
+import 'package:simple_weahter_app_ad/weather_data.dart';
 
 void main() {
   runApp(const MainApp());
@@ -15,3 +16,6 @@ class MainApp extends StatelessWidget {
     );
   }
 }
+
+WeatherData weatherNow =
+    WeatherData(city: "Krefeld", temperature: 24.4, weaterCondition: "sunny");

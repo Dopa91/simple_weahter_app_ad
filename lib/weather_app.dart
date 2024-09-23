@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simple_weahter_app_ad/main.dart';
 
 class WeatherApp extends StatelessWidget {
   const WeatherApp({super.key});
@@ -23,27 +24,32 @@ class WeatherApp extends StatelessWidget {
               ),
             ),
           ),
-          const Row(
-            children: [
-              Column(
-                children: [
-                  Text(
-                    "Stadt",
-                    style: TextStyle(fontSize: 24),
-                  ),
-                ],
-              ),
-            ],
+          Padding(
+            padding: const EdgeInsets.only(top: 24, left: 24, bottom: 16),
+            child: Row(
+              children: [
+                Text(
+                  weatherNow.city,
+                  style: const TextStyle(fontSize: 24),
+                ),
+              ],
+            ),
           ),
-          const Row(
-            children: [
-              Text("Temperatur"),
-            ],
+          Padding(
+            padding: const EdgeInsets.only(left: 24, bottom: 12),
+            child: Row(
+              children: [
+                Text(weatherNow.temperature.toString()),
+              ],
+            ),
           ),
-          const Row(
-            children: [
-              Text("Wetter"),
-            ],
+          Padding(
+            padding: const EdgeInsets.only(left: 24),
+            child: Row(
+              children: [
+                Text(weatherNow.weaterCondition),
+              ],
+            ),
           ),
         ],
       ),
