@@ -1,11 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:simple_weahter_app_ad/main.dart';
+import 'package:simple_weahter_app_ad/weather_data.dart';
+import 'package:simple_weahter_app_ad/weather_repo.dart';
 
 class WeatherApp extends StatelessWidget {
-  const WeatherApp({super.key});
+  const WeatherApp({super.key, required this.repository});
+
+  final WeatherRepo repository;
 
   @override
   Widget build(BuildContext context) {
+    final WeatherData weatherReading = repository.getWeather();
+    final String city = weatherReading.city;
+    final double temperature = weatherReading.temperature;
+    final String weaterCondition = weatherReading.weaterCondition;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -16,9 +25,9 @@ class WeatherApp extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Center(
-            child: Container(
-              child: const Text(
+          const Center(
+            child: SizedBox(
+              child: Text(
                 "Willkommen zur Wetter-App!",
                 style: TextStyle(fontSize: 24, color: Colors.blue),
               ),
@@ -29,7 +38,7 @@ class WeatherApp extends StatelessWidget {
             child: Row(
               children: [
                 Text(
-                  weatherNow.city,
+                  city,
                   style: const TextStyle(fontSize: 24),
                 ),
               ],
@@ -39,7 +48,7 @@ class WeatherApp extends StatelessWidget {
             padding: const EdgeInsets.only(left: 24, bottom: 12),
             child: Row(
               children: [
-                Text(weatherNow.temperature.toString()),
+                Text(temperature.toString()),
               ],
             ),
           ),
@@ -47,7 +56,7 @@ class WeatherApp extends StatelessWidget {
             padding: const EdgeInsets.only(left: 24),
             child: Row(
               children: [
-                Text(weatherNow.weaterCondition),
+                Text(weaterCondition),
               ],
             ),
           ),
