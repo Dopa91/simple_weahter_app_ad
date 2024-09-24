@@ -13,7 +13,7 @@ class WeatherApp extends StatelessWidget {
     final WeatherData weatherReading = repository.getWeather();
     final String city = weatherReading.city;
     final double temperature = weatherReading.temperature;
-    final String weaterCondition = weatherReading.weaterCondition;
+    final String weatherCondition = weatherReading.weatherCondition;
 
     return Scaffold(
       appBar: AppBar(
@@ -56,7 +56,7 @@ class WeatherApp extends StatelessWidget {
             padding: const EdgeInsets.only(left: 24),
             child: Row(
               children: [
-                Text(weaterCondition),
+                Text(weatherCondition),
               ],
             ),
           ),

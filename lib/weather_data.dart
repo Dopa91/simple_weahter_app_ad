@@ -1,10 +1,10 @@
 class WeatherData {
   String city;
   double temperature;
-  String weaterCondition;
+  String weatherCondition;
 
   WeatherData(
       {required this.city,
       required this.temperature,
-      required this.weaterCondition});
+      required this.weatherCondition});
 }
